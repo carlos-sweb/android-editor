@@ -1,0 +1,7 @@
+html,body{
+ 	display:block;
+ 	float:left;
+ 	min-width:100% !important;
+ 	min-height:100% !important;
+ 	height:100%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Editor</title>
+
+	<!-- Create a simple CodeMirror instance -->
+
+<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+<link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="node_modules/codemirror/addon/display/fullscreen.css">
+<link rel="stylesheet" href="node_modules/codemirror/theme/monokai.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<textarea id="code" class="CodeMirror-fullscreen" style="font-size:18px;" ></textarea>
+
+
+<script src="node_modules/codemirror/lib/codemirror.js"></script>
+<script src="node_modules/codemirror/mode/javascript/javascript.js" ></script>
+<script src="node_modules/codemirror/addon/display/fullscreen.js" ></script>
+
+<script>
+
+ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+    lineNumbers: true,
+    mode: "javascript",
+    fullscreen:true,
+    theme:"monokai"
+ });
+
+ console.log(editor.options.fullscreen);
+
+ editor.setSize("100%", "100%");
+
+</script>
+
+</body>
+</html>
